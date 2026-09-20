@@ -1,0 +1,51 @@
+/*
+  Pipo Fremantle theme
+  --------------------
+  Change these variables to restyle the whole site.
+  Nepal flag colours sit at the centre: crimson red and deep blue,
+  with gold and cream for a warm restaurant feel.
+*/
+
+:root {
+  --pipo-red: #c8102e;
+  --pipo-red-deep: #8e0b20;
+  --pipo-blue: #003893;
+  --pipo-navy: #0b1220;
+  --pipo-navy-soft: #151d2e;
+  --pipo-gold: #c9a227;
+  --pipo-gold-soft: #e6d3a3;
+  --pipo-cream: #f6f0e6;
+  --pipo-sand: #eadcc6;
+  --pipo-ink: #16120e;
+  --pipo-muted: #6d6258;
+  --pipo-white: #fffdf8;
+
+  --flag-blue: #0033a0;
+  --flag-white: #ffffff;
+  --flag-red: #dc143c;
+  --flag-green: #1c8c3a;
+  --flag-yellow: #f4c430;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+  --shadow-card: 0 18px 50px rgba(11, 18, 32, 0.16);
+}
+
+@theme inline {
+  --color-pipo-red: var(--pipo-red);
+  --color-pipo-red-deep: var(--pipo-red-deep);
+  --color-pipo-blue: var(--pipo-blue);
+  --color-pipo-navy: var(--pipo-navy);
+  --color-pipo-navy-soft: var(--pipo-navy-soft);
+  --color-pipo-gold: var(--pipo-gold);
+  --color-pipo-gold-soft: var(--pipo-gold-soft);
+  --color-pipo-cream: var(--pipo-cream);
+  --color-pipo-sand: var(--pipo-sand);
+  --color-pipo-ink: var(--pipo-ink);
+  --color-pipo-muted: var(--pipo-muted);
+  --color-pipo-white: var(--pipo-white);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-deva: var(--font-deva);
+}

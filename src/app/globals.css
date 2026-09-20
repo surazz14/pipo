@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "../theme/tokens.css";
+
+html,
+body {
+  background: var(--pipo-cream);
+  color: var(--pipo-ink);
+}
+
+body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+.font-deva {
+  font-family: var(--font-deva), sans-serif;
+}
+
+.nepal-word {
+  color: var(--pipo-red);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background-image: linear-gradient(var(--pipo-blue), var(--pipo-blue));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 3px;
+  padding-bottom: 1px;
+}
+
+.prayer-flags {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  height: 10px;
+}
+
+.prayer-flags span {
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+}
+
+.btn-gold,
+.btn-red,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.85rem 1.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-gold {
+  background: var(--pipo-gold);
+  color: var(--pipo-navy);
+}
+
+.btn-gold:hover {
+  background: var(--pipo-gold-soft);
+  transform: translateY(-1px);
+}
+
+.btn-red {
+  background: var(--pipo-red);
+  color: white;
+}
+
+.btn-red:hover {
+  background: var(--pipo-red-deep);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 253, 248, 0.45);
+  color: var(--pipo-white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 253, 248, 0.08);
+}
+
+.footer-heading {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--pipo-gold);
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--pipo-gold);
+}
+
+.section-title {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  color: var(--pipo-navy);
+}
+
+.gold-rule {
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pipo-red), var(--pipo-gold), var(--pipo-blue));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pipo-muted);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--pipo-navy) 16%, transparent);
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  color: var(--pipo-ink);
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--pipo-red);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pipo-red) 18%, transparent);
+}
+
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--pipo-navy);
+  color: var(--pipo-white);
+  padding: 9rem 1.25rem 5rem;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 18, 32, 0.88), rgba(11, 18, 32, 0.55)),
+    linear-gradient(0deg, rgba(200, 16, 46, 0.22), transparent 45%);
+  z-index: -1;
+}
+
+.page-hero h1 {
+  text-shadow: 0 8px 30px rgba(11, 18, 32, 0.45);
+}
+
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
