@@ -32,10 +32,10 @@ export const site = {
 } as const;
 
 export const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/", label: "Home", external: false },
+  { href: "/about", label: "About Us", external: false },
   { href: site.menuUrl, label: "Menu", external: true },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact", external: false },
 ] as const;
 
 export const signatureDishes = [

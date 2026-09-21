@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 import { site } from "./src/config/site";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // Docker uses standalone. Netlify sets NETLIFY=true and needs the default Next output.
+  ...(process.env.NETLIFY ? {} : { output: "standalone" as const }),
   async redirects() {
     return [
       {

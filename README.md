@@ -1,6 +1,6 @@
 # Pipo Fremantle
 
-Nepalese restaurant website for **Pipo Fremantle**, in Fremantle Food Court. Built with Next.js so it is simple to host with Docker.
+Nepalese restaurant website for **Pipo Fremantle**, in Fremantle Food Court. Built with Next.js.
 
 Menu links (and `/menu`) send guests to the live ordering page: [pipofremantle.lifeintouch.net](https://pipofremantle.lifeintouch.net/).
 
@@ -29,7 +29,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Docker (recommended for hosting)
+## Host on Netlify
+
+This repo is ready for Netlify (see `netlify.toml`). The easiest path is GitHub:
+
+1. Open [app.netlify.com](https://app.netlify.com) and add a new site from Git.
+2. Choose the `surazz14/pipo` repository, branch `main`.
+3. Netlify detects Next.js. Build command is `npm run build`, publish directory is `.next`, Node `22`.
+4. Deploy. Later pushes to `main` update the live site.
+
+## Docker
 
 ```bash
 docker compose up --build -d
@@ -43,11 +52,4 @@ To stop:
 docker compose down
 ```
 
-## Production build without Docker
-
-```bash
-npm run build
-npm start
-```
-
-`next.config.ts` uses `output: "standalone"` so the Docker image only needs the standalone server, static assets, and `public/`.
+`next.config.ts` uses `output: "standalone"` for Docker. On Netlify that flag is skipped automatically.
