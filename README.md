@@ -29,14 +29,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Host on Netlify
+## Host on Netlify (from Git)
 
-This repo is ready for Netlify (see `netlify.toml`). The easiest path is GitHub:
+Import [surazz14/pipo](https://github.com/surazz14/pipo) in the Netlify dashboard. Use these settings (also in `netlify.toml`):
 
-1. Open [app.netlify.com](https://app.netlify.com) and add a new site from Git.
-2. Choose the `surazz14/pipo` repository, branch `main`.
-3. Netlify detects Next.js. Build command is `npm run build`, publish directory is `.next`, Node `22`.
-4. Deploy. Later pushes to `main` update the live site.
+| Setting | Value |
+| --- | --- |
+| Branch | `main` |
+| Build command | `npm run build` |
+| Publish directory | `.next` |
+| Node version | `22` |
+
+Do not add the `@netlify/plugin-nextjs` package — Netlify applies its Next.js adapter automatically.
 
 ## Docker
 
